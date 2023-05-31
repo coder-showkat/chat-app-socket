@@ -1,6 +1,7 @@
-const io = require("socket.io")(8800, {
+require("dotenv").config();
+const io = require("socket.io")(process.env.PORT, {
     cors: {
-        origin: "https://chat-app-sam.netlify.app"
+        origin: "*"
     }
 })
 
